@@ -1,30 +1,45 @@
+// Function parameter type annotations:
+const doSomething = (person: string, age: number, isFunny: boolean) => {};
+
+// Return type annotation:
+function greet(person: string = "stranger"): string {
+  return `Hi there, ${person}!`;
+}
+
 function square(num: number): number {
-  return num * num
+  return num * num;
 }
 
-square(12)
+square(3);
+greet("Tonya Harding");
+doSomething("ChickenFace", 78, true);
 
-function greet(person: string = 'Dima'): string {
-  return `Hey, ${person}`
-}
+// Arrow function:
+const add = (x: number, y: number): number => {
+  return x + y;
+};
 
-greet()
+// Contextual Type Clues
+const colors = ["red", "orange", "yellow"];
+colors.map((color) => {
+  return color.toUpperCase();
+});
 
-function sumNum(num: number, num2: number): number {
-  return num * num2
-}
-
-sumNum(2, 2);
-
-const numbers = [1, 2, 3];
-
-numbers.forEach(num => {
-  return num.toUppercase();
-})
-
+// Void
 function printTwice(msg: string): void {
-  console.log(msg)
-  return ''
+  console.log(msg);
+  console.log(msg);
+}
+
+// Never
+function makeError(msg: string): never {
+  throw new Error(msg);
+}
+
+function gameLoop(): never {
+  while (true) {
+    console.log("GAME LOOP RUNNING!");
+  }
 }
 
 
