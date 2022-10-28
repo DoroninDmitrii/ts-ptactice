@@ -59,3 +59,4 @@ const isLeapYear = (year: number): boolean => {
 console.log(isLeapYear(2000))
 
 
+
