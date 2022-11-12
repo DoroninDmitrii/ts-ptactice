@@ -1,9 +1,9 @@
+"use strict";
 // Function parameter type annotations:
-var doSomething = function (person, age, isFunny) { };
+const doSomething = (person, age, isFunny) => { };
 // Return type annotation:
-function greet(person) {
-    if (person === void 0) { person = "stranger"; }
-    return "Hi there, ".concat(person, "!");
+function greet(person = "stranger") {
+    return `Hi there, ${person}!`;
 }
 function square(num) {
     return num * num;
@@ -12,12 +12,12 @@ square(3);
 greet("Tonya Harding");
 doSomething("ChickenFace", 78, true);
 // Arrow function:
-var add = function (x, y) {
+const add = (x, y) => {
     return x + y;
 };
 // Contextual Type Clues
-var colors = ["red", "orange", "yellow"];
-colors.map(function (color) {
+const colors = ["red", "orange", "yellow"];
+colors.map((color) => {
     return color.toUpperCase();
 });
 // Void
@@ -34,11 +34,10 @@ function gameLoop() {
         console.log("GAME LOOP RUNNING!");
     }
 }
-function twoFer(person) {
-    if (person === void 0) { person = 'you'; }
-    return "One for ".concat(person, ", one for me");
+function twoFer(person = 'you') {
+    return `One for ${person}, one for me`;
 }
-var isLeapYear = function (year) {
+const isLeapYear = (year) => {
     if (year % 4 === 0 && year % 100 !== 0) {
         return true;
     }

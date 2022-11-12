@@ -1,45 +1,51 @@
-var pt = { x: 100, y: 200, z: 500 };
-pt.x = 200;
-pt.z = 6000;
-var thomas = {
-    id: 1,
+"use strict";
+// Point as a TYPE ALIAS
+// type Point = {
+//     x: number,
+//     y: number
+// }
+const pt = { x: 123, y: 1234 };
+const thomas = {
     first: "Thomas",
     last: "Hardy",
     nickname: "Tom",
-    sayHi: function () {
-        return 'Hello World';
-    }
+    id: 21837,
+    sayHi: () => {
+        return "Hello!";
+    },
 };
-var shoes = {
-    name: 'shoes',
+thomas.first = "kasjdh";
+const shoes = {
+    name: "Blue Suede Shoes",
     price: 100,
-    applyDiscount: function (discount) {
-        if (discount === void 0) { discount = 1; }
-        var newPrice = this.price - discount;
-        return newPrice;
-    }
+    applyDiscount(amount) {
+        const newPrice = this.price * (1 - amount);
+        this.price = newPrice;
+        return this.price;
+    },
 };
-var elton = {
-    name: 'Elton',
+console.log(shoes.applyDiscount(0.4));
+const elton = {
+    name: "Elton",
     age: 0.5,
-    breed: 'Shepherd',
-    bark: function () {
-        return 'woof';
-    }
+    breed: "Australian Shepherd",
+    bark() {
+        return "WOOF WOOF!";
+    },
 };
-// type Dog =  {
-//   name: string;
-//   age: number;
-// }
-// type Dog = {
-//   breed: string;
-//   bark: () => string
-// }
-// const elton: Dog = {
-//   name: 'Elton',
-//   age: 0.5,
-//   breed: 'Shepherd',
-//   bark: () => {
-//     return 'woof'
-//   }
-// }
+const chewy = {
+    name: "Chewy",
+    age: 4.5,
+    breed: "Lab",
+    bark() {
+        return "Bark!";
+    },
+    job: "guide dog",
+};
+const pierre = {
+    name: "Pierre",
+    id: 123897,
+    email: "pierre@gmail.com",
+    level: "senior",
+    languages: ["JS", "Python"],
+};
