@@ -1,3 +1,5 @@
 1. npx tsc <file> - compile to JS.
-2. npx tsx -w <file> - watch mistakes if they are existed
-3. npx tsx --init - create tsconfig.json
+2. npx tsc -w <file> - watch mistakes if they are existed
+3. npx tsc --init - create tsconfig.json
+4. mkdir <name folder> - create folder
+5. touch <file name> - create file

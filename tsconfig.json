@@ -101,5 +101,5 @@
     "skipLibCheck": true,
   },
   // "files": ["Basic/basic.ts"]  
-  "include": ["src"]                               /* Skip type checking all .d.ts files. */
+  "include": ["src/**/*"]                               /* Skip type checking all .d.ts files. */
 }
